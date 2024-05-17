@@ -4,8 +4,14 @@
 working_directory
 
 mainDir <- base::getwd()
+subDir_data <- "data"
 subDir_output <- "Output"
+
+data_Dir <- base::file.path(mainDir, subDir_data)
 output_Dir <- base::file.path(mainDir, subDir_output)
+
+### create data folder
+base::ifelse(!base::dir.exists(data_Dir), base::dir.create(data_Dir), "Sub Directory exists")
 
 ### create output folder
 base::ifelse(!base::dir.exists(output_Dir), base::dir.create(output_Dir), "Sub Directory exists")
@@ -13,7 +19,7 @@ base::ifelse(!base::dir.exists(output_Dir), base::dir.create(output_Dir), "Sub D
 ## Install required packages
 
 ### Install CRAN packages
-required_packages <- c("googledrive", "tidyverse", "janitor", "knitr", "readxl", "writexl", "tibble",
+required_packages <- c("tidyverse", "janitor", "knitr", "readxl", "writexl", "tibble",
                        "DiagrammeR", "DiagrammeRsvg", "rsvg", "jsonlite", "httr", "officer", "sf",
                        "rnaturalearth", "rnaturalearthdata", "giscoR")
 

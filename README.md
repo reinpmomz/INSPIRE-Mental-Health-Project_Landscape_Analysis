@@ -24,7 +24,7 @@ The data used for analysis and/or generated are available on reasonable request 
 
 ## Run
 
-After cloning the repository or downloading the ZIP, you also need the data files (**Data used for analysis** and **Meta Data Generated**) in the _INSPIRE-Mental-Health-Project_Landscape_Analysis_ folder.
+After cloning the repository or downloading the ZIP, you also need the data files (**Data used for analysis** and **Meta Data Generated**) in the _data_ sub-folder of _INSPIRE-Mental-Health-Project_Landscape_Analysis_ folder.
 
 Open `Rstudio` then set your working directory to the _INSPIRE-Mental-Health-Project_Landscape_Analysis_ folder. 
 

@@ -76,6 +76,9 @@ source("articles_map.R")
 ### Africa Map of tools
 source("tools_map.R")
 
+### Heat maps of tools - Africa
+source("tools_heatmap.R")
+
 
 ######################################################################
 

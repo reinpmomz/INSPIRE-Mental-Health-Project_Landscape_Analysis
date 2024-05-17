@@ -4,8 +4,11 @@ library(janitor)
 working_directory
 
 ## reading the meta data from local folder
-metadata_list <- read_excel_allsheets(filename = "Longitudinal Meta data.xlsx")
-data_request_list <- read_excel_allsheets(filename = "Track_list of data request letters.xlsx")
+metadata_list <- read_excel_allsheets(filename = base::file.path(data_Dir, "Longitudinal Meta data.xlsx")
+                                      )
+
+data_request_list <- read_excel_allsheets(filename = base::file.path(data_Dir, "Track_list of data request letters.xlsx")
+                                          )
 
 df_track_list <- data_request_list[["inclusion_longitudinal_data_req"]]
 

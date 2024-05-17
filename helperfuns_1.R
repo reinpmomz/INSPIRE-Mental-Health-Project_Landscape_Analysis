@@ -61,3 +61,14 @@ ggtheme_sf_plot <- function(){
   )
 }
 
+ggtheme_heat_plot = function(angletext_yaxis=0, angletext_xaxis=0) {
+  theme_set(theme_bw(base_size = 10)
+   + theme(panel.grid = element_blank()
+           , plot.title = element_text(hjust = 0.5, face = "bold", size = 10)
+           , axis.title.x = element_blank()
+           , axis.title.y = element_blank()
+           , axis.text.y = element_text(size = 8.5, angle = angletext_yaxis, lineheight = 0.7)
+           , axis.text.x = element_text(size = 8.5, angle = angletext_xaxis, lineheight = 0.7)
+           )
+   )
+}
