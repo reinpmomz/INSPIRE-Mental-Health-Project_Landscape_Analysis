@@ -21,7 +21,7 @@ table_1 <- tbl_summary(df_meta %>%
   modify_header(label = "**Descriptives**") %>% # update the column header
   bold_labels() %>%
   italicize_levels()%>%
-  add_n( statistic = "{n}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
+  add_n( statistic = "{N_nonmiss}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
   modify_caption(caption = "Quality Check") %>%
   as_flex_table() #covert gtsummary object to knitrkable object. also use as_flex_table() to maintain identation, footnotes, spanning headers
 
@@ -49,7 +49,7 @@ table_2 <- tbl_summary(df_quality %>%
   modify_header(label = "**Descriptives**") %>% # update the column header
   bold_labels() %>%
   italicize_levels()%>%
-  add_n( statistic = "{n}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
+  add_n( statistic = "{N_nonmiss}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
   modify_caption(caption = "Correctly Identified Articles (N = {N})") 
 
 table_2
@@ -81,7 +81,7 @@ table_3 <- sapply(c("type_of_study", "depression", "anxiety", "psychosis",
                           modify_header(label = "**Descriptives**") %>% # update the column header
                           bold_labels() %>%
                           italicize_levels()%>%
-                          add_n( statistic = "{n}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
+                          add_n( statistic = "{N_nonmiss}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
                           modify_caption(caption = paste0("Correctly Identified Articles", " - ", nn, " (N = {N})")) %>%
                           modify_header(all_stat_cols() ~ paste0("**", "{level}**, n = {n} ({style_percent(p)}%)"))
                       } else {
@@ -105,7 +105,7 @@ table_3 <- sapply(c("type_of_study", "depression", "anxiety", "psychosis",
                           modify_header(label = "**Descriptives**") %>% # update the column header
                           bold_labels() %>%
                           italicize_levels()%>%
-                          add_n( statistic = "{n}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
+                          add_n( statistic = "{N_nonmiss}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
                           modify_caption(caption = paste0("Correctly Identified Articles", " - ", nn, " (N = {N})")) %>%
                           modify_header(all_stat_cols() ~ paste0("**", nn , " - ", "{level}**, n = {n} ({style_percent(p)}%)"))
                       }
@@ -137,7 +137,7 @@ table_4 <- sapply(c("status_email_request", "data_received"), function(x){
     modify_header(label = "**Descriptives**") %>% # update the column header
     bold_labels() %>%
     italicize_levels()%>%
-    add_n( statistic = "{n}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
+    add_n( statistic = "{N_nonmiss}", col_label = "**n**", last = FALSE, footnote = FALSE)%>% # add column with total number of non-missing observations
     modify_caption(caption = paste0("Data Request Articles", " - ", nn, " (N = {N})")) %>%
     modify_header(all_stat_cols() ~ paste0("**", nn , " - ", "{level}**, n = {n} ({style_percent(p)}%)"))
   
